@@ -1,3 +1,5 @@
+# notifications
+
 Below is a basic configuration of this server.
 
 ## `main.go`  
@@ -24,3 +26,11 @@ mastodontoken={[access token](#access-token)}
 4. Submit
 5. Copy *Your access token*
 6. Paste it in your `.env`
+
+## Usage
+
+Update `fly.toml` to fit your needs.
+
+## Contributing
+
+Send patches/bug reports to <~jordanreger/public-inbox@lists.sr.ht>
