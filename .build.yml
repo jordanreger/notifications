@@ -4,7 +4,7 @@ packages:
 secrets:
   - ba15cb04-1731-4e77-a9c7-661df65ecfd8
 sources:
-  - https://git.sr.ht/~jordanreger/web
+  - https://git.sr.ht/~jordanreger/notifications
 tasks:
   - install-flyctl: |
       curl -L https://fly.io/install.sh | sh
@@ -15,4 +15,4 @@ tasks:
 
       export FLYCTL_INSTALL="/home/build/.fly"
       export PATH="$FLYCTL_INSTALL/bin:$PATH"
-      flyctl deploy --remote-only ./web/notifications
+      flyctl deploy --remote-only ./notifications
