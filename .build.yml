@@ -1,0 +1,18 @@
+image: alpine/edge
+packages:
+  - curl
+secrets:
+  - ba15cb04-1731-4e77-a9c7-661df65ecfd8
+sources:
+  - https://git.sr.ht/~jordanreger/web
+tasks:
+  - install-flyctl: |
+      curl -L https://fly.io/install.sh | sh
+  - deploy: |
+      set +x
+      export FLY_API_TOKEN=$(cat ~/.fly_token)
+      set -x
+
+      export FLYCTL_INSTALL="/home/build/.fly"
+      export PATH="$FLYCTL_INSTALL/bin:$PATH"
+      flyctl deploy --remote-only ./web/notifications
