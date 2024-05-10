@@ -1,7 +1,7 @@
 package main
 
 import (
-	bsky "jordanreger.com/bsky/api"
+	"jordanreger.com/bsky"
 	"time"
 )
 
